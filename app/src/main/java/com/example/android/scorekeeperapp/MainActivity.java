@@ -12,33 +12,35 @@ public class MainActivity extends AppCompatActivity {
     int teamAfoul = 0;
     int teamSfoul = 0;
 
-    Button rg, rgok;
+    Button
+    //    Reset button - Make reset button visible
+    rg,
+    //    Reset button - Make reset button invisible when reset button have been pressed
+    rgok;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        rg = (Button) findViewById(R.id.resetbutton);
-        rgok = (Button) findViewById(R.id.resetbutton);
+        rg =  findViewById(R.id.resetbutton);
+        rgok =  findViewById(R.id.resetbutton);
     }
 
     public void ok(View view) {
         rg.setVisibility(View.VISIBLE);
-
     }
 
     //    Display score for Team Aquarius.
 
     public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
 
     }
 
     public void displayForTeamAfoul(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_foul);
+        TextView scoreView = findViewById(R.id.team_a_foul);
         scoreView.setText(String.valueOf(score));
-
     }
 
     //    Increase the score for Team Aquarius by 1 point.
@@ -72,15 +74,13 @@ public class MainActivity extends AppCompatActivity {
     //    Displays the score for Team Scropions.
 
     public void displayForTeamS(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_s_score);
+        TextView scoreView = findViewById(R.id.team_s_score);
         scoreView.setText(String.valueOf(score));
-
     }
 
     public void displayForTeamSfoul(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_s_foul);
+        TextView scoreView = findViewById(R.id.team_s_foul);
         scoreView.setText(String.valueOf(score));
-
     }
 
     //     Increase the score for Team Scropions by 1 point.
@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamSfoul(teamSfoul);
     }
 
+    // This script runs when reset button is pressed
 
     public void reset(View v) {
         rgok.setVisibility(View.INVISIBLE);
@@ -119,5 +120,4 @@ public class MainActivity extends AppCompatActivity {
         displayForTeamAfoul(teamAfoul = 0);
         displayForTeamSfoul(teamSfoul = 0);
     }
-
 }

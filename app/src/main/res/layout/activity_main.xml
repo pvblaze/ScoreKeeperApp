@@ -7,7 +7,6 @@
     tools:context="com.example.android.scorekeeperapp.MainActivity">
 
     <RelativeLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -31,7 +30,7 @@
                     android:gravity="center"
                     android:padding="4dp"
                     android:text="Team Aquarius"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -99,9 +98,7 @@
                     android:onClick="team_a_foul"
                     android:text="FOUL" />
 
-
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -117,7 +114,7 @@
                     android:gravity="center"
                     android:padding="4dp"
                     android:text="Team Scorpions"
-                    android:textSize="20dp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -189,16 +186,13 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_below="@id/scoretable"
             android:layout_centerHorizontal="true"
-            android:orientation="vertical"
-
-            >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/resetgo"
@@ -206,7 +200,6 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@id/resetbutton"
                 android:onClick="ok"
-
                 android:text="reset scoretable" />
 
             <Button
@@ -214,7 +207,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-
                 android:onClick="reset"
                 android:text="Yes, I'm sure!"
                 android:visibility="invisible" />
